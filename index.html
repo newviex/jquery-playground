@@ -13,6 +13,44 @@
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
+    <style>
+               #div1, #div2, #div3{
+            width: 80px;
+            height: 80px;
+            display: none;
+            margin: 10px;
+        }
+
+        #div1{
+            background-color: red;
+        }
+
+        #div2{
+            background-color: green;
+        }
+
+        #div3{
+            background-color: blue;
+        }
+
+        #panel, #flip{
+            padding: 5px;
+            text-align:center;
+            background-color: yellow;
+            border: solid 1px black;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        #flip{
+            cursor:pointer;
+        }
+
+        #panel{
+            padding: 50px;
+            display: none;
+        }
+    </style>
     
     
     <script>
@@ -51,6 +89,30 @@
                 $("p").show();
             });
 
+            
+           $("#btnWithDelay").click(function(){
+            $("#hideWithDelay").hide(1000);
+           });
+           
+           $("#btn--toggle").click(()=>{
+            //$("#para--toggle").toggle();
+            //$("#para--toggle").toggle("slow");
+            $("#para--toggle").toggle("fast");
+           });
+
+           $("#btn--fade").click(function(){
+            $("#div1").fadeIn("fast");
+            $("#div2").fadeIn("slow");
+            $("#div3").fadeIn("3000");
+        });
+
+        $("#flip").click(()=>{
+            $("#panel").slideDown("slow");
+           });
+
+           $("button").click(()=>{
+            alert("Value: " + $("#testValue").val());
+           })
         }); // end of jquery documnent.ready function
    </script>
 
@@ -97,6 +159,34 @@
             <button id="hide">Hide</button>
             <button id="show">Show</button>
 
+            <hr>
+            <button id="btnWithDelay">HIDE WITH DELAY</button>
+            <p id="hideWithDelay">This is our paragraph for testing the hide delay </p>
+            
+            <hr>
+            <h4>Toggle effect</h4>
+            <button id="btn--toggle">Toggle Paragraphs</button>
+            <p id="para--toggle">This is our paragraph for testing the toggle effect. </p>
+            
+            
+        </section>
+
+        <section style="height: 50vh; background-color: lightblue;">
+            <button id="btn--fade">Click to Fade</button>
+            <h2>FADE EFFECT</h2>
+            <div id="div1"></div>
+            <div id="div2"></div>
+            <div id="div3"></div>
+        </section>
+
+        <section style="height: 50vh; background-color:antiquewhite">
+            <div id="flip">Click to slide down</div>
+            <div id="panel">Sliding panel</div>
+        </section>
+
+        <section style="height: 50vh; background-color:goldenrod;text-align:center;">
+            <p>Name: <input type="text" id="testValue" value="Aldrien Allanigue"></p>
+            <button>Show Value</button>
         </section>
     </main>
     
