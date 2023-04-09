@@ -41,7 +41,16 @@
             //$("#right-card").children().css("color", "green");
 
             $(".target:odd").addClass("animate__animated animate__zoomInUp")
-           $(".target:even").addClass("animate__animated animate__slideInDown")
+            $(".target:even").addClass("animate__animated animate__slideInDown")
+            
+            $("#hide").click(function(){
+                $("p").hide();
+            });
+
+            $("#show").click(function(){
+                $("p").show();
+            });
+
         }); // end of jquery documnent.ready function
    </script>
 
@@ -81,6 +90,13 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section>
+            <h2>jQuery Effects</h2>
+            <p>We can hide and show a button</p>
+            <button id="hide">Hide</button>
+            <button id="show">Show</button>
+
         </section>
     </main>
     
