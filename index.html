@@ -22,10 +22,19 @@
             $("button").addClass("animate__animated animate__bounce"); // we are targetting ann element selector
             $(".card").addClass("animate__animated animate__swing");  // we can target classNames
             $("#target--5").addClass("animate__animated animate__heartBeat"); // we can target id's
+            // $("button").removeClass("btn-primary"); // we can remove a classname using jquery
+            $("#target--1").css("color", "yellow"); // we can change css styles using the css() method
+            let a = 1;
+            if (a==1){
+            $("button").prop("disabled", true); // we can disable elements using jquery
+            }else{
+            $("button").prop("disabled", false); // we can disable elements using jquery
+             };
+
         }); // end of jquery documnent.ready function
    </script>
 
-   
+
 </head>
 <body>
     <header>
