@@ -23,14 +23,25 @@
             $(".card").addClass("animate__animated animate__swing");  // we can target classNames
             $("#target--5").addClass("animate__animated animate__heartBeat"); // we can target id's
             // $("button").removeClass("btn-primary"); // we can remove a classname using jquery
-            $("#target--1").css("color", "yellow"); // we can change css styles using the css() method
-            let a = 1;
-            if (a==1){
-            $("button").prop("disabled", true); // we can disable elements using jquery
-            }else{
-            $("button").prop("disabled", false); // we can disable elements using jquery
-             };
+            // $("#target--1").css("color", "yellow"); // we can change css styles using the css() method
+            // let a = 1;
+            // if (a==1){
+            // $("button").prop("disabled", true); // we can disable elements using jquery
+            // }else{
+            // $("button").prop("disabled", false); // we can disable elements using jquery
+            //  };
 
+            //$("#target--5").html("<em>Target 5</em>"); // we can add html tags and text within an element.
+           //$("#target--6").text("Button 6"); // we can replace text within an element.
+           //$("#target--6").remove(); // remove element
+           //$("#target--4").appendTo("#left-card"); // appendTo
+           //$("#target--3").appendTo("#right-card");
+           //$("#target--6").clone().appendTo("#left-card"); // FUNCTION CHAINING
+           //$("#target--1").parent().css("background-color", "lightblue");// target parent element
+            //$("#right-card").children().css("color", "green");
+
+            $(".target:odd").addClass("animate__animated animate__zoomInUp")
+           $(".target:even").addClass("animate__animated animate__slideInDown")
         }); // end of jquery documnent.ready function
    </script>
 
